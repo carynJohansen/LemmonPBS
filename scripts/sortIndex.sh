@@ -20,6 +20,8 @@ bamFile="../combinedBams.filelist"
 
 bam=$(awk -v var="$SLURM_ARRAY_TASK_ID" 'FNR == var {print}' $bamFile)
 
+
+
 echo $bam
 
 pwd
@@ -29,6 +31,7 @@ pwd
 
 bam_start=`date +%s`
 
+samtools sort $bam
 samtools index $bam
 
 bam_end=`date +%s`
