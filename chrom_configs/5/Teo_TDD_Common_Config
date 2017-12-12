@@ -25,11 +25,11 @@ PROJECT=Teo_TDD
 #   Where do we put the outfiles?
     #   Note, the final outdirectory will be
     #   ${SCRATCH}/${PROJECT}/<name_of_program/>
-SCRATCH=/home/caryn89/Projects/LemmonPBS/results
+SCRATCH=/home/caryn89/Projects/LemmonPBS/results/chr5
 
 #   Define the region being looked at
 #       Optional, but ANGSD is expensive to run without specifying regions to look at
-REGIONS=
+REGIONS=region.txt
 
 #   Set common parameters for all methods
 #       Use only uniquely-mapped reads
