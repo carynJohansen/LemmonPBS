@@ -6,7 +6,8 @@
 #SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/igetBams_%j.out
 #SBATCH --time=9:00:00
 #SBATCH --mem=50000
-#SBATCH --array=1-211
+#SBATCH --array=1-91
+
 
 set -u
 set -e

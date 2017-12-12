@@ -1,12 +1,12 @@
 #!/bin/bash -l
 
-#SBATCH -D /home/caryn89/apps/angsd-wrapper/Lemmon
+#SBATCH -D /home/caryn89/Projects/LemmonPBS
 #SBATCH -J ancestral
 #SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/ancestral_%j.out
 #SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/ancestral_%j.out
-#SBATCH --time=50:00:00
-#SBATCH --mem=50000
-#SBATCH --array=1:10
+#SBATCH --time=5:00:00
+#SBATCH --mem=22000
+#SBATCH -c 24
 
 set -u
 set -e
@@ -25,9 +25,10 @@ config="/home/caryn89/Projects/LemmonPBS/configs/Ancestral_Sequence_Config"
 
 start=`date +%s`
 
-./angsd-wrapper Ancestral $config
+angsd-wrapper/angsd-wrapper Ancestral $config
 
 end=`date +%s`
-t=(($end - $start))
+((t=$end - $start))
 
 echo ancestral angsd wrapper took $t seconds
+

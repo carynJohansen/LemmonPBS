@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH -D /home/caryn89/Projects/LemmonPBS
+#SBATCH -D /home/caryn89/Projects/LemmonPBS/data/raw
 #SBATCH -J sortIndex
 #SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/sortIndex_%j.out
 #SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/sortIndex_%j.out
@@ -16,15 +16,13 @@ set -e
 
 module load samtools/1.3.1
 
-bamFile="data/combinedBams.filelist"
+bamFile="../combinedBams.filelist"
 
 bam=$(awk -v var="$SLURM_ARRAY_TASK_ID" 'FNR == var {print}' $bamFile)
 
 echo $bam
 
-outdir="data/raw"
-
-echo $outdir$bam
+pwd
 
 ##################
 # MAIN

@@ -1,9 +1,9 @@
 #!/bin/bash -l
 
 #SBATCH -D /home/caryn89/Projects/LemmonPBS
-#SBATCH -J maize_tdd_fst
-#SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/maize_tdd_fst_%j.out
-#SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/maize_tdd_fst_%j.out
+#SBATCH -J teo_tdd_fst
+#SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/teo_tdd_fst_%j.out
+#SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/teo_tdd_fst_%j.out
 #SBATCH --time=96:00:00
 #SBATCH --mem=50000
 #SBATCH -N 1
@@ -15,7 +15,7 @@ set -e
 ###############
 #   Set-up    #
 
-fst_config="/home/caryn89/Projects/LemmonPBS/Maize_TDD_FST_config"
+fst_config="/home/caryn89/Projects/LemmonPBS/Teo_TDD_FST_Config"
 
 ################
 #     Main     #
