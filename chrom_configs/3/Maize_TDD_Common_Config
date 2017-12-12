@@ -29,7 +29,7 @@ SCRATCH=/home/caryn89/Projects/LemmonPBS/results/chr3
 
 #   Define the region being looked at
 #       Optional, but ANGSD is expensive to run without specifying regions to look at
-REGIONS=region.txt
+REGIONS=/home/caryn89/Projects/LemmonPBS/chrom_configs/3/region.txt
 
 #   Set common parameters for all methods
 #       Use only uniquely-mapped reads
