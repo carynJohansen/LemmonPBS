@@ -1,0 +1,7 @@
+/home/caryn89/Projects/LemmonPBS/data/raw/B73.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/CML103.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/Oh43.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/Mo17.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/W22.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TDD.bam
+

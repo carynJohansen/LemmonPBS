@@ -1,0 +1,9 @@
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL01.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL03.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL05.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL09.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL10.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL11.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL14.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL15.bam
+
