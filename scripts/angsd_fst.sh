@@ -1,9 +1,9 @@
 #!/bin/bash -l
 
 #SBATCH -D /home/caryn89/Projects/LemmonPBS
-#SBATCH -J teo_tdd_fst
-#SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/teo_tdd_fst_%j.out
-#SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/teo_tdd_fst_%j.out
+#SBATCH -J region10
+#SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/region_teo_fst_%j.out
+#SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/region_teo_fst_%j.out
 #SBATCH --time=96:00:00
 #SBATCH --mem=50000
 #SBATCH -N 1
