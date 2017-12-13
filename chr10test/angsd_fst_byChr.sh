@@ -24,11 +24,11 @@ chr=10
 if [ $chr -eq 11 ]; then chr=Mt; fi
 if [ $chr -eq 12 ]; then chr=Pt; fi
 
-echo array: $SLURM_ARRAY_TASK_ID
+echo array ID: $SLURM_ARRAY_TASK_ID
 echo chromsome: $chr
 
 # reference fasta
-ftpzip=ftp://ftp.ensemblgenomes.org/pub/plants/release-31/fasta/zea_mays/dna/Zea_mays.AGPv3.31.dna.chromosome.$SLURM_ARRAY_TASK_ID.fa.gz
+ftpzip=ftp://ftp.ensemblgenomes.org/pub/plants/release-31/fasta/zea_mays/dna/Zea_mays.AGPv3.31.dna.chromosome.$chr.fa.gz
 
 ftp=Zea_mays.AGPv3.31.dna.chromosome.$chr.fa
 
