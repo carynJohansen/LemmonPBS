@@ -2,8 +2,8 @@
 
 #SBATCH -D /home/caryn89/Projects/LemmonPBS
 #SBATCH -J chr_fst
-#SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/chr_teo_tdd_fst_%j.out
-#SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/chr_teo_tdd_fst_%j.out
+#SBATCH -o /home/caryn89/Projects/LemmonPBS/logs/chr10_teo_tdd_fst_%j.out
+#SBATCH -e /home/caryn89/Projects/LemmonPBS/logs/chr10_teo_tdd_fst_%j.out
 #SBATCH --time=96:00:00
 #SBATCH --mem=50000
 #SBATCH -N 1
@@ -24,13 +24,13 @@ chr=10
 if [ $chr -eq 11 ]; then chr=Mt; fi
 if [ $chr -eq 12 ]; then chr=Pt; fi
 
-echo array ID: $SLURM_ARRAY_TASK_ID
+#echo array ID: $SLURM_ARRAY_TASK_ID
 echo chromsome: $chr
 
 # reference fasta
 ftpzip=ftp://ftp.ensemblgenomes.org/pub/plants/release-31/fasta/zea_mays/dna/Zea_mays.AGPv3.31.dna.chromosome.$chr.fa.gz
-
-ftp=Zea_mays.AGPv3.31.dna.chromosome.$chr.fa
+fazip=Zea_mays.AGPv3.31.dna.chromosome.$chr.fa.gz
+fa=Zea_mays.AGPv3.31.dna.chromosome.$chr.fa
 
 
 # variable for directory
@@ -51,12 +51,12 @@ bam_num=$(wc -l $bambaseFile)
 
 datadir=data/raw
 
-for i in `seq 1 16`
-do
-	bambase=$(awk -v var="$i" 'FNR == var {print}' $bambaseFile)
-	sortbam=$datadir/$bambase.sort.bam
-	samtools view -hb $sortbam $chr > $datadar/$bambase.chr$chr.sort.bam
-done
+#for i in `seq 1 16`
+#do
+#	bambase=$(awk -v var="$i" 'FNR == var {print}' $bambaseFile)
+#	sortbam=$datadir/$bambase.sort.bam
+#	samtools view -hb $sortbam $chr > $datadir/$bambase.chr$chr.sort.bam
+#done
 
 
 # write the sample lists for each chromosome, for maize and teosinte 
@@ -66,18 +66,23 @@ done
 
 #get the chromosome reference
 cd ~/genomes/maize_dna_31
-wget $ftpzip
+#wget $ftpzip
 
 # unzip fasta
-gunzip $ftpzup
+gunzip $fazip
 
+echo samtools index fasta
 #generate index
-samtools faidx $ftp
+samtools faidx $fa
 echo $?
 
 #back to Lemmon 
 cd /home/caryn89/Projects/LemmonPBS
+pwd
+echo $config
 
+echo angsd-wrapper test
 angsd-wrapper/angsd-wrapper Fst $config
+echo $?
 
 echo $SLURM_JOB_ID $SLURM_ARRAY_TASK_ID $chr $config_dir >> chr10test/fst_chr.info
