@@ -1,0 +1,8 @@
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL01.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL03.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL05.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL09.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL10.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL11.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL14.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/TIL15.chr10.sort.bam

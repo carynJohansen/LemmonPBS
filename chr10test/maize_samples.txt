@@ -1,0 +1,6 @@
+/home/caryn89/Projects/LemmonPBS/data/raw/B73.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/CML103.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/Oh43.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/KI3.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/Mo17.chr10.sort.bam
+/home/caryn89/Projects/LemmonPBS/data/raw/W22.chr10.sort.bam
