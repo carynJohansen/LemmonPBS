@@ -1,5 +1,18 @@
 # Population Branch Statistic
 
+* Created: January 9, 2018
+* Author: Caryn Johansen
+* Contact: caryn.k.johansen@gmail.com
+
+Last updated: January 15, 2018
+
+Here, I will be going into more detail on the contents of the project directories in Projects/
+
+**IMPORTANT NOTE:** While summarizing and cleaning my farm, I did move some files and directories. This may have changed how some of the files run - but I did not go in and change those scripts. If you are trying to run a script as is and it fails, the first issue checked should be the directory paths.
+
+**MEA CULPA:** I wrote this all in vim very quickly. I did not spell check or edit.
+
+
 on Lemmon et al. data
 
 The purpose of this project is to calculate the population branch statistic between maize and teosinte using tripsicum as an outgroup.
