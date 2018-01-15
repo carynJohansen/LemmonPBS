@@ -7,25 +7,25 @@ set -o pipefail
 #   A simple script to hold common variables for angsd-wrapper
 
 #   Define a list of samples
-SAMPLE_LIST=/home/caryn89/Projects/LemmonPBS/chr10test/teo_tdd_samples.txt
+SAMPLE_LIST=/home/caryn89/Projects/LemmonPBS/configs/samples_teo_tdd.filelist
 
 #   Define a list of inbreeding coefficients
 #	This should end in '_.indF'
-SAMPLE_INBREEDING=/home/caryn89/Projects/LemmonPBS/chr10test/teo_tdd.indF
+SAMPLE_INBREEDING=/home/caryn89/Projects/LemmonPBS/configs/teo_tdd.indF
 
 #   Ancestral sequence
-ANC_SEQ=/home/caryn89/genomes/maize_dna_31/Zea_mays.AGPv3.31.dna.chromosome.10.fa
+ANC_SEQ=/home/caryn89/genomes/maize_dna_31/Zea_mays.AGPv3.31.dna.genome.fa
 
 #   Reference sequence
-REF_SEQ=/home/caryn89/genomes/maize_dna_31/Zea_mays.AGPv3.31.dna.chromosome.10.fa
+REF_SEQ=/home/caryn89/genomes/maize_dna_31/Zea_mays.AGPv3.31.dna.genome.fa
 
 #   Name the project
-PROJECT=Teo_TDD
+PROJECT=Teo_test2
 
 #   Where do we put the outfiles?
     #   Note, the final outdirectory will be
     #   ${SCRATCH}/${PROJECT}/<name_of_program/>
-SCRATCH=/home/caryn89/Projects/LemmonPBS/chr10test
+SCRATCH=/home/caryn89/Projects/LemmonPBS/results
 
 #   Define the region being looked at
 #       Optional, but ANGSD is expensive to run without specifying regions to look at
@@ -45,7 +45,7 @@ GT_LIKELIHOOD=2
 #       Set the minimum mapping quality for a base to be used
 MIN_MAPQ=30
 #       Set the minimum mapping quality for a base to be used
-N_CORES=32
+N_CORES=40
 #       Determine major and minor alleles
 DO_MAJORMINOR=1
 #       Call genotypes from genotype likelihoods

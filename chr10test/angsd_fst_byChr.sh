@@ -7,7 +7,7 @@
 #SBATCH --time=96:00:00
 #SBATCH --mem=50000
 #SBATCH -N 1
-#SBATCH -c 24
+#SBATCH -c 40
 
 set -u
 set -e
@@ -65,19 +65,19 @@ datadir=data/raw
 ## MAIN
 
 #get the chromosome reference
-cd ~/genomes/maize_dna_31
+#cd ~/genomes/maize_dna_31
 #wget $ftpzip
 
 # unzip fasta
-gunzip $fazip
+#gunzip $fazip
 
-echo samtools index fasta
+#echo samtools index fasta
 #generate index
-samtools faidx $fa
-echo $?
+#samtools faidx $fa
+#echo $?
 
 #back to Lemmon 
-cd /home/caryn89/Projects/LemmonPBS
+#cd /home/caryn89/Projects/LemmonPBS
 pwd
 echo $config
 
@@ -85,4 +85,4 @@ echo angsd-wrapper test
 angsd-wrapper/angsd-wrapper Fst $config
 echo $?
 
-echo $SLURM_JOB_ID $SLURM_ARRAY_TASK_ID $chr $config_dir >> chr10test/fst_chr.info
+echo $SLURM_JOB_ID $chr $config_dir >> chr10test/fst_chr.info

@@ -7,7 +7,7 @@ set -o pipefail
 #   A simple script to hold variables for the Fst estimations
 #   Are you using the Common_Config file?
 #       If so, where is it?
-COMMON=/home/caryn89/Projects/LemmonPBS/chr10test/Teo_TDD_Common_Config
+COMMON=/home/caryn89/Projects/LemmonPBS/test_Common_Config
 
 ##############################################################################################
 #   If we aren't using the Common_Config file, specify these variables
@@ -55,19 +55,19 @@ DO_POST=
 GROUP_1=Tripsicum
 
 #   Sample list for group 1
-G1_SAMPLE_LIST=/home/caryn89/Projects/LemmonPBS/chr10test/tdd_sample.txt
+G1_SAMPLE_LIST=/home/caryn89/Projects/LemmonPBS/configs/tdd.filelist
 
 #   Inbreeding coefficients for group 1
-G1_INBREEDING=/home/caryn89/Projects/LemmonPBS/chr10test/tdd.indF
+G1_INBREEDING=/home/caryn89/Projects/LemmonPBS/configs/tdd.indF
 
 #   What is group 2?
 GROUP_2=Teosinte
 
 #   Sample list for group 2
-G2_SAMPLE_LIST=/home/caryn89/Projects/LemmonPBS/chr10test/teo_sample.txt
+G2_SAMPLE_LIST=/home/caryn89/Projects/LemmonPBS/configs/teo_test_sample.txt
 
 #   Inbreeding coefficients for group 2
-G2_INBREEDING=/home/caryn89/Projects/LemmonPBS/chr10test/teo.indF
+G2_INBREEDING=/home/caryn89/Projects/LemmonPBS/configs/teo_test.indF
 
 #   FST Parameters
 #       Listed below are the defaults, please modify for your samples
@@ -76,7 +76,7 @@ DO_SAF=2
 #       Set the minimum number of individuals required for group 1
 MIN_IND1=1
 #       Set the minimum number of individuals required for group 2
-MIN_IND2=6
+MIN_IND2=4
 #       Overwrite any previously generated results
 OVERRIDE=true
 #       Calculate global Fst values
